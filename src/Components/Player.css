@@ -1,0 +1,43 @@
+.player-container {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-areas: "sidebar__body player__body";
+  grid-template-columns: 230px 1fr;
+}
+.player-container > div {
+  overflow-y: overlay;
+}
+.player__body {
+  grid-area: player__body;
+}
+.footer__body {
+  height: 65px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: #282828;
+  padding: 20px;
+  pointer-events: none;
+  top: auto;
+  bottom: 0;
+  position: fixed;
+}
+.sidebar__body {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 100px);
+  flex: 1;
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #040404;
+  grid-area: sidebar__body;
+  overflow-y: visible !important;
+}
+
+.sidebar__body > hr {
+  border: 1px solid #282828;
+  width: 90%;
+  margin-top: 10px;
+}
